@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  pyspark-notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pyspark-notebook
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+      - "${SPARK_UI_PORT:-4040}:4040"
+    volumes:
+      - ./work:/home/jovyan/work
+      - ./notebooks:/home/jovyan/notebooks
+      - ./.env:/home/jovyan/notebooks/.env  
+    environment:
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+      - SPARK_LOCAL_IP=0.0.0.0
+      - PYSPARK_PYTHON=python
+      - SPARK_JARS_DIR=/usr/local/spark/jars
+      - SNOWFLAKE_URL=${SNOWFLAKE_URL}
+      - SNOWFLAKE_USER=${SNOWFLAKE_USER}
+      - SNOWFLAKE_PASSWORD=${SNOWFLAKE_PASSWORD}
+      - SNOWFLAKE_ACCOUNT=${SNOWFLAKE_ACCOUNT}
+      - SNOWFLAKE_DATABASE=${SNOWFLAKE_DATABASE}
+      - SNOWFLAKE_SCHEMA_RAW=${SNOWFLAKE_SCHEMA_RAW}
+      - SNOWFLAKE_SCHEMA_ANALYTICS=${SNOWFLAKE_SCHEMA_ANALYTICS}
+      - SNOWFLAKE_WAREHOUSE=${SNOWFLAKE_WAREHOUSE}
+      - YEARS=${YEARS}
+      - MONTHS=${MONTHS}
+      - SERVICES=${SERVICES}
+      - RUN_ID=${RUN_ID}
+      - PARQUET_BASE_URL=${PARQUET_BASE_URL}
+    command: start-notebook.sh --NotebookApp.token="${JUPYTER_TOKEN}"
