@@ -68,15 +68,50 @@ Tampoco necesario de ejecutar bloque 12 y 13 ya que se utilizo para la validacio
 
 <img width="613" height="274" alt="image" src="https://github.com/user-attachments/assets/07b77c0b-e5e9-4c09-9900-2dd7cb159582" />
 
-## 🔐 Variables de Entorno (.env)
+Aparte de los mencionados, todos los bloques se ejecutan en secuencia y son importantes de ejecutar 
 
-Estas variables garantizan la conexión segura y reproducible entre Spark y Snowflake:
+### Variables de ambiente: listado y propósito; guía para .env.
 
-```bash
-SNOWFLAKE_ACCOUNT=xxxxxxxx
-SNOWFLAKE_USER=xxxxxxxx
-SNOWFLAKE_PASSWORD=xxxxxxxx
-SNOWFLAKE_WAREHOUSE=COMPUTE_WH
-SNOWFLAKE_DATABASE=NYCTAXI
-SNOWFLAKE_SCHEMA_RAW=RAW
-PARQUET_BASE_URL=https://d37ci6vzurychx.cloudfront.net/trip-data
+Estas variables garantizan la conexión segura y reproducible entre Spark y Snowflake. Ademas que son incluidas en la raiz y no directamente en los notebooks para seguridad de credenciales y datos:
+
+<img width="701" height="685" alt="image" src="https://github.com/user-attachments/assets/6940e4c4-9615-4691-83d2-ca70cb372865" />
+
+Estas variables ya estan conectadas dentro de los notebooks para poder ingresar a bdd y usar datos
+
+### Diseño de raw y OBT (columnas, derivadas, metadatos, supuestos).
+
+**Esquema RAW**
+
+Tablas: RAW.YELLOW_YYYY_MM, RAW.GREEN_YYYY_MM, INGEST_AUDIT
+
+Columnas: directas del Parquet (pickup/dropoff, fare, tip, etc.)
+
+Metadatos añadidos:
+- service_type
+- source_year
+- source_month
+- run_id
+- ingested_at_utc
+- source_path
+
+**Esquema ANALYTICS (OBT)**
+
+Tabla: ANALYTICS.TRIPS_ENRICHED
+
+Columnas derivadas:
+- vendor_name (según VendorID)
+- rate_code_desc
+- payment_type_desc
+- pu_borough, pu_zone, do_borough, do_zone (join con lookup)
+
+Finalidad: permitir análisis directos sin joins adicionales.
+
+### Calidad/auditoría: qué se valida y dónde se ve.
+
+| Validación              | Descripción                                                               | Ubicación   |
+| ----------------------- | ------------------------------------------------------------------------- | ----------- |
+| Duplicados          | Se comparan conteos con y sin `dropDuplicates()`                          | Notebook 04 |
+| Nulos              | Conteo de `nulls` por columna                                             | Notebook 04 |
+| Auditoría de cargas | Registro en `RAW.INGEST_AUDIT` con `run_id`, `rows_ingested`, `timestamp` | Notebook 01 |
+| **Verificación final**  | Comparación entre filas RAW vs ANALYTICS                                  | Notebook 04 |
+
