@@ -125,3 +125,56 @@ Finalidad: permitir análisis directos sin joins adicionales.
 | ------------ | ---- | ----- | ------------------------ | ------------- | -------------------- |
 | yellow       | 2019 | 01    | p3_run_20251017_235900 | 193982        | 2025-10-17T23:59:00Z |
 
+### Carpeta de evidencias
+
+**Compose con servicio:** 
+<img width="1551" height="140" alt="image" src="https://github.com/user-attachments/assets/f65277cb-030b-4917-87c3-ff11e263b815" />
+
+**Nootebook 01:**
+<img width="1187" height="816" alt="image" src="https://github.com/user-attachments/assets/ea191055-d197-48d8-8003-4d0cb215a04b" />
+<img width="954" height="818" alt="image" src="https://github.com/user-attachments/assets/eb457c17-f364-4bca-8c34-9230a19f1110" />
+<img width="980" height="811" alt="image" src="https://github.com/user-attachments/assets/fdd3105e-ea71-4c4f-bc37-45ccc1b1ac19" />
+<img width="917" height="842" alt="image" src="https://github.com/user-attachments/assets/6e3f1ebc-db2e-4629-8747-3220b3dee025" />
+<img width="1048" height="844" alt="image" src="https://github.com/user-attachments/assets/3a46b42d-da73-4759-a977-6af0d03563ae" />
+<img width="907" height="822" alt="image" src="https://github.com/user-attachments/assets/8ae27e1e-ba75-4c30-8f95-b81d9efb8cdb" />
+<img width="958" height="815" alt="image" src="https://github.com/user-attachments/assets/382dcb27-cd49-4f5a-8828-9dcaab8dda34" />
+<img width="967" height="802" alt="image" src="https://github.com/user-attachments/assets/a5ec0fb6-f6fc-4220-b2fe-d934becef7b3" />
+
+**Nootebook 02:**
+
+<img width="1033" height="831" alt="image" src="https://github.com/user-attachments/assets/a37ca12e-aabc-446a-9eec-7f1da18ee265" />
+<img width="988" height="840" alt="image" src="https://github.com/user-attachments/assets/94a8a111-7f03-45db-b904-ff4b0caebd1f" />
+<img width="946" height="822" alt="image" src="https://github.com/user-attachments/assets/a51d7fc6-b294-4eca-8e95-cb3bde4b4267" />
+<img width="946" height="818" alt="image" src="https://github.com/user-attachments/assets/8ad2a9b9-0157-4223-aa0c-a5a034f8b150" />
+<img width="1054" height="829" alt="image" src="https://github.com/user-attachments/assets/1cc05545-932f-4cd3-9a9d-5ee5afb6b77b" />
+<img width="1017" height="837" alt="image" src="https://github.com/user-attachments/assets/173b923b-1481-4814-a74f-729001654eae" />
+<img width="992" height="837" alt="image" src="https://github.com/user-attachments/assets/0e392f08-a823-4477-8ee4-a5ea39bb1fe4" />
+<img width="1169" height="829" alt="image" src="https://github.com/user-attachments/assets/1a571055-78e5-4390-b447-9c8b21f155eb" />
+<img width="960" height="824" alt="image" src="https://github.com/user-attachments/assets/3f907191-6931-48a1-a461-ca90347316c1" />
+<img width="1008" height="823" alt="image" src="https://github.com/user-attachments/assets/5fd6a07d-c436-42ab-8086-121235a56081" />
+<img width="1304" height="827" alt="image" src="https://github.com/user-attachments/assets/2cbc3b03-13fc-4732-baca-c10431f7573a" />
+<img width="1086" height="830" alt="image" src="https://github.com/user-attachments/assets/bf3af81b-f289-40dd-b35b-94194cf80386" />
+<img width="1109" height="798" alt="image" src="https://github.com/user-attachments/assets/342c8554-7d65-4741-b7fb-33db11c7f682" />
+
+
+**Tablas en snowflake**
+
+Raw
+<img width="1222" height="815" alt="image" src="https://github.com/user-attachments/assets/daf4fbe5-dfa4-431c-bbef-8ad5d5dd7b75" />
+<img width="1230" height="744" alt="image" src="https://github.com/user-attachments/assets/0163df8b-6184-4193-98de-bf7e721590e5" />
+<img width="1241" height="566" alt="image" src="https://github.com/user-attachments/assets/aea611f2-7d90-430c-b76a-715ff3e81543" />
+
+Analitys
+
+<img width="1272" height="801" alt="image" src="https://github.com/user-attachments/assets/7927e880-b13d-4604-89c4-48984f20ab89" />
+<img width="1090" height="886" alt="image" src="https://github.com/user-attachments/assets/dcccd0e7-9076-481b-8ac2-796f62530704" />
+
+Para mejor observacion visualizar en el proyecto en notebooks 
+
+
+
+
+
+
+
+
