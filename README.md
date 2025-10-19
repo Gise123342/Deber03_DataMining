@@ -110,8 +110,13 @@ Finalidad: permitir análisis directos sin joins adicionales.
 
 | Validación              | Descripción                                                               | Ubicación   |
 | ----------------------- | ------------------------------------------------------------------------- | ----------- |
-| Duplicados          | Se comparan conteos con y sin `dropDuplicates()`                          | Notebook 04 |
-| Nulos              | Conteo de `nulls` por columna                                             | Notebook 04 |
-| Auditoría de cargas | Registro en `RAW.INGEST_AUDIT` con `run_id`, `rows_ingested`, `timestamp` | Notebook 01 |
-| **Verificación final**  | Comparación entre filas RAW vs ANALYTICS                                  | Notebook 04 |
+| Duplicados          | Se comparan conteos con y sin dropDuplicates()                          | Notebook 04 |
+| Nulos              | Conteo de nulls por columna                                             | Notebook 04 |
+| Auditoría de cargas | Registro en RAW.INGEST_AUDIT con run_id, rows_ingested, timestamp | Notebook 01 |
+| Verificación final  | Comparación entre filas RAW vs ANALYTICS                                  | Notebook 04 |
+
+**Registro de auditoria**
+| service_type | year | month | run_id                   | rows_ingested | logged_at_utc        |
+| ------------ | ---- | ----- | ------------------------ | ------------- | -------------------- |
+| yellow       | 2019 | 01    | p3_run_20251017_235900 | 193982        | 2025-10-17T23:59:00Z |
 
