@@ -5,6 +5,11 @@
 **Codigo Banner:** 00325549
 
 
+**Carpeta de evidencias ( estara en el ultimo iteral de reedme con fotos):**
+
+Capturas de Compose corriendo, servicios ejecutándose y
+conectados, conteos por lote, snapshot de OBT.
+
 
 ### Descripción General
 
